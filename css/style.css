@@ -9,7 +9,13 @@ html{
 body{
     /* background: rgb(226, 203, 85) !important; */
     background: rgb(253,187,45);
-    background: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%);
+    /* background: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%); */
+    /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
+    /* background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%); */
+    /* background-image: linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%); */
+    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
 }
 navbar{
@@ -18,7 +24,7 @@ navbar{
 }
 .cf{
     padding: 50px;
-    height: 70vh;
+    height: 60vh;
     width: 40% !important;
     min-width: 500px;
     border: solid 2px rgb(217, 182, 5);
@@ -50,16 +56,16 @@ navbar{
 }
 
 .bloc1{ 
-    height: 40%;
+    height: 50%;
     min-height: 200px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgb(79, 219, 153);
+    background-color: rgb(220, 225, 84);
     border-radius: 1rem;
     color: whitesmoke;
-    margin: 0 20px;
+    margin: 0 20px ;
 }
 .bloc1 img{
     width: 50%;
@@ -112,12 +118,56 @@ ion-icon:hover {
     transition: ease-in-out 0.5s;
 }
 
+.button {
+    height: 50px;
+    width: 200px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #252525;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .btn-txt {
+    z-index: 1;
+    font-weight: 800;
+    letter-spacing: 4px;
+  }
+  
+  .type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #333;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+  }
+  
+  .button:hover {
+    box-shadow: 1px 1px 200px #252525;
+    color: #fff;
+    border: none;
+  }
+  
+  .type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+  }
+
 /* --------------------------------------- Media queries --------------------------------------- */
 
 @media screen and (max-width:500px) {
     .cf{
         padding: 20px;
-        height: 80vh;
+        height: 60vh;
         width: 40% !important;
         min-width: 300px;
         border: solid 2px rgb(217, 182, 5);
@@ -129,15 +179,27 @@ ion-icon:hover {
         flex-direction: column;
         justify-content: space-around;
     }
+    .cielImg{
+        height: 100px;
+        width: 100px;
+    }
     .homeTitre {
         color: rgb(226, 203, 85);
         border-bottom: 5px solid rgb(226, 203, 85) ;
         font-size: 3em;
     }
     .bloc1{ 
-        height: 50%; 
-        min-height: 300px;
+        height: 40%; 
+        min-height: 200px;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
         background-color: rgb(160, 143, 57)
+    }
+    .bloc2{
+        margin-top: 00px;
+    }
+    .bloc3 > h4{
+        font-size: 18px;
+    }
+}
